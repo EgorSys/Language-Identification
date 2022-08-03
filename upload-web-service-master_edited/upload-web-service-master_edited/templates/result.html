@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Language Identification</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+  <div align="center">
+    <header class="header">
+      <div class="header_wrapper">
+        <br>
+      </div>
+    </header>
+    <br>
+    <h1>Language Identification</h1>
+    <div>
+        <p>
+            It seems that the language spoken in these audiofiles is:
+        </p>
+        {% for lang in pred_langs%}
+        <p>{{lang}}</p>
+        {% endfor %}
+    </div>
+  </div>
+  </body>
+</html>

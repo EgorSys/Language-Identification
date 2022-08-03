@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Идентификация языка</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+  <div align="center">
+    <header class="header">
+      <div class="header_wrapper">
+        <br>
+      </div>
+    </header>
+    <br>
+    <h1>Идентификация языка</h1>
+    <div>
+        <p>
+            Выберите аудиофайлы на компьютере и нажмите кнопку загрузки.
+        </p>
+    </div>
+    <form method="POST" action="" enctype="multipart/form-data">
+      <p>
+        <div class="custom-file-upload">
+          <div class="form-group">
+            <label class="label">
+              <i class="material-icons">attach_file</i>
+              <span class="title">Добавить файл</span>
+              <input type="file" name="file" multiple>
+            </label>
+          </div>
+        </div>
+      </p>
+      <p><input type="submit" value="Загрузить"></p>
+    </form>
+  </div>
+  <div>
+    {% if timestamps %}
+      {{ timestamps }}
+    {% endif %}
+  </div>
+  </body>
+</html>

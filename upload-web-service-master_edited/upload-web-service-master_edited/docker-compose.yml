@@ -1,0 +1,15 @@
+version: '2.3'
+
+services:
+  upload-web-service:
+    restart: always
+    container_name: upload-web-service
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: upload-web-service:latest
+    volumes:
+      - .:/upload-web-service
+    command: bash -c "gunicorn --access-logfile - -w 1 --bind 0.0.0.0:5055 app:app --timeout 15000"
+    ports:
+      - 5055:5055
